@@ -179,7 +179,7 @@ st.markdown('<h1 class="glowing-title">Tune Genie</h1>', unsafe_allow_html=True)
 seeds ={  'seed1' : "60 _ _ _ _ _ _ _ 60 _ _ _ _ _ _ _ 60 _ _ _ _ _ _ _ 62",'seed2' : "69 _ _ _ _ _ _ _",'seed3' : "69 _ _ _ 69 _ _ _ 69 _ _ _ 72 _ _ _ 72 _ _ _ 69",'seed4' : "76 _ _ _ 76 _ _ _ _ _ 76 _ 76 _ _ _ 79 _ _ _ 74 ",'seed5': "71 _ _ _ 69 _" }
 
 
-seed = st.selectbox( 'choose seed ' , ('seed1','seed2','seed3','seed4','seed5','Try your own seed' ))
+seed = st.selectbox( 'choose seed ' , ('seed1','seed2','seed3','seed4','seed5'))
 
 
 if seed == "Try your own seed":
