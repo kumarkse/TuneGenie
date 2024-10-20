@@ -1,0 +1,24 @@
+python3 -m venv venv
+venv\Scripts\activate
+pip install flask
+
+Organize your project directory like this:
+my_flask_app/
+├── app.py
+├── templates/
+│   └── index.html
+├── static/
+│   ├── css/
+│   └── js/
+└── venv/
+
+Create a Basic Flask Application
+
+Add an HTML Template
+
+Run the Flask App
+Make sure your virtual environment is activated, then run:
+python app.py
+
+Freeze Requirements
+pip freeze > requirements.txt

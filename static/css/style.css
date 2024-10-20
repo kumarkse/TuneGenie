@@ -1,0 +1,84 @@
+body {
+    display: flex;
+    background-color: #181818;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #000;
+    padding: 20px;
+    height: 100vh;
+}
+
+.sidebar .logo h1 {
+    color: #fff;
+}
+
+.sidebar nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar nav ul li {
+    margin: 15px 0;
+}
+
+.sidebar nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    font-size: 24px;
+}
+
+header input {
+    width: 60%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+header button {
+    padding: 10px 20px;
+    background: #FF69B4;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.trending {
+    margin-top: 30px;
+}
+
+.trending h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.trending-items {
+    display: flex;
+    gap: 15px;
+}
+
+.trending-item {
+    width: 150px;
+    text-align: center;
+}
+
+.trending-item img {
+    width: 100%;
+    border-radius: 5px;
+}
