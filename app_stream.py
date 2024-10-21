@@ -3,7 +3,8 @@ import json
 import numpy as np
 import music21 as m21
 import streamlit as st
-import tensorflow.keras as keras
+import tensorflow as tf
+from tensorflow import keras
 
 
 MAPPING_PATH = "mapping.json"

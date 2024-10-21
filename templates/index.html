@@ -33,27 +33,135 @@
         </nav>
     </div>
     
-    <div class="main-content">
-        <header>
-            <h2>Make a Melody about anything</h2>
-            <input type="text" placeholder="Just enter a number between 1 and 100 ">
-            <button>Create your tune</button>
-        </header>
-
-        <section class="trending">
-            <h2>Global Trending</h2>
-            <div class="trending-items">
-                <div class="trending-item">
-                    <img src="/static/images/song1.jpg" alt="Song Image"> 
-                    <p>PHONK Snake</p>
-                </div>
-                <!-- Add more trending items similarly -->
+    <div class="main">
+        <div class="top-section">
+            <div class="heading">Make a melody of your own</div>
+            <div class="searchbox">
+                <input type="text" class="inputbox" placeholder="Enter a number between 1 and 100">
+                <div class="create-btn">♫ Create</div>
             </div>
-        </section>
-
-        <footer>
-            <p>© 2024 Suno Music</p>
-        </footer>
+            
+        </div>
+        <div class="lower-section">
+            <div class="music-player">
+                <div class="track-info">
+                    <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Album Cover" class="album-cover">
+                    <div class="track-details">
+                        <h2 class="track-title">Party-Cat</h2>
+                        <h3 class="artist-name">RenhaL</h3>
+                    </div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 1%;"></div>
+                    </div>
+                    <div class="time">
+                        <span class="current-time">00:01</span> / <span class="total-time">05:13</span>
+                    </div>
+                </div>
+                <div class="controls">
+                    <button class="control-button" id="prev-button">|◀◀</button>
+                    <button class="control-button" id="play-button">
+                        ▶
+                       </button>
+                    <button class="control-button" id="next-button">▶▶|</button>
+                </div>
+                <div class="volume-control">
+                    <button class="volume-button">🔊</button>
+                    <input type="range" class="volume-slider" min="0" max="100" value="50">
+                </div>
+                <audio id="audio" src="{{ url_for('static', filename='audio/your_song.mp3') }}"></audio>
+            </div>
+            </div>
+        <div class="middle-section">
+            <ul class="genres">
+                
+                <li class="global">Cultural Trending
+                    <div class="card-container">
+                        <div class="card">
+                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+        
+                            <div class="card-overlay">
+                                <div class="duration">3:16</div>
+                                <div class="likes">
+                                    <span>2.8K</span> <i class="icon-like"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>Chaoyang Dance ✨</h3>
+                                <p>[Lively, Bouncy Drop, J-pop]</p>
+                                <p>Wine loves fl...</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card">
+                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <div class="card-overlay">
+                                <div class="duration">2:59</div>
+                                <div class="likes">
+                                    <span>2.1K</span> <i class="icon-like"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>The Monster Within</h3>
+                                <p>sad ballad, chill guitar, sa...</p>
+                                <p>Oyojee</p>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <div class="card-overlay">
+                                <div class="duration">2:59</div>
+                                <div class="likes">
+                                    <span>2.1K</span> <i class="icon-like"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>The Monster Within</h3>
+                                <p>sad ballad, chill guitar, sa...</p>
+                                <p>Oyojee</p>
+                            </div>
+                        </div>
+        
+                        <div class="card">
+                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <div class="card-overlay">
+                                <div class="duration">2:59</div>
+                                <div class="likes">
+                                    <span>2.1K</span> <i class="icon-like"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>The Monster Within</h3>
+                                <p>sad ballad, chill guitar, sa...</p>
+                                <p>Oyojee</p>
+                            </div>
+                        </div>
+        
+        
+                        <div class="card">
+                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <div class="card-overlay">
+                                <div class="duration">2:59</div>
+                                <div class="likes">
+                                    <span>2.1K</span> <i class="icon-like"></i>
+                                </div>
+                            </div>
+                            <div class="card-content">
+                                <h3>The Monster Within</h3>
+                                <p>sad ballad, chill guitar, sa...</p>
+                                <p>Oyojee</p>
+                            </div>
+                        </div>
+                    
+                        <!-- Add more cards as needed -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+            
+        </div>
     </div>
 
     <script src="/static/js/script.js"></script>

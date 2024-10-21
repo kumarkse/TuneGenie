@@ -1,8 +1,9 @@
 body {
     display: flex;
+    justify-content: space-evenly;
     background-color: #181818;
     color: white;
-    font-family: Arial, sans-serif;
+    font-family: Editorial New, ui-serif, Georgia, Cambria, Times New Roman, Times, serif;
 }
 
 .sidebar {
@@ -30,55 +31,227 @@ body {
     color: #fff;
 }
 
-.main-content {
-    flex: 1;
+/***********************************************************/
+
+.main{
+    width: 100%;
+    padding: 25px;
+}
+/*************************/
+.top-section{
+    width: 100%;
+    margin: 5px;
+}
+.heading{
+    font-size:50px;
+    font-weight: 100;
+}
+.searchbox{
+    border: 1px solid rgb(120, 120, 120);
+    width: 50%;
+    margin: 25px auto;
+    padding: 10px;
+    border-radius: 50px;
+    display: flex;
+    justify-content:space-between;
+    background-color: rgb(46, 46, 46);
+}
+.inputbox{
+    border : none;
+    outline: none;
+    background: none;
+    color: #fff;
+    width: 80%;
+    font-size: large;
+}
+.create-btn{
+    width: 70px;
+    padding: 10px;
+    border-radius: 50px;
+    background: rgb(2,0,36);
+background: linear-gradient(304deg, rgba(2,0,36,1) 0%, rgba(183,16,79,1) 62%, rgba(0,212,255,1) 100%);
+}
+
+
+/*************************/
+.middle-section{
+
+}
+.genres{
+    list-style-type: none;
+}
+.genres li{
+    margin: 20px 0;
+}
+/*************************/
+.lower-section{
+    
+
+}
+
+
+/****************************************************/
+
+
+.card-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
     padding: 20px;
 }
 
-header {
+.card {
+    position: relative;
+    width: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    background: #1e1e1e;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-overlay {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 20px);
+    font-size: 0.9em;
+}
+
+.duration {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 5px;
+    border-radius: 5px;
+}
+
+.likes {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 2px 5px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.card-content p {
+    font-size: 0.9em;
+    color: #b0b0b0;
+}
+
+
+/************************************************************/
+.music-player {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.track-info {
+    display: flex;
+    align-items: center;
+}
+
+.album-cover {
+    width: 60px;
+    height: 60px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+
+.track-details {
+    flex: 1;
+}
+
+.track-title {
+    font-size: 18px;
+    margin: 0;
+}
+
+.artist-name {
+    font-size: 14px;
+    color: #bbb;
+    margin: 0;
+}
+
+.progress-container {
+    margin: 10px 0;
+}
+
+.progress-bar {
+    background-color: #555;
+    border-radius: 5px;
+    height: 10px;
+    width: 100%;
+    position: relative;
+}
+
+.progress {
+    background-color: #e91e63;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: #e91e63;
+    font-size: 24px;
+    cursor: pointer;
+    margin: 0 10px;
+}
+
+.volume-control {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-header h2 {
-    font-size: 24px;
-}
-
-header input {
-    width: 60%;
-    padding: 10px;
-    margin-right: 10px;
-}
-
-header button {
-    padding: 10px 20px;
-    background: #FF69B4;
+.volume-button {
+    background: none;
     border: none;
-    color: white;
+    color: #e91e63;
+    font-size: 24px;
     cursor: pointer;
 }
 
-.trending {
-    margin-top: 30px;
-}
-
-.trending h2 {
-    font-size: 22px;
-    margin-bottom: 10px;
-}
-
-.trending-items {
-    display: flex;
-    gap: 15px;
-}
-
-.trending-item {
-    width: 150px;
-    text-align: center;
-}
-
-.trending-item img {
-    width: 100%;
-    border-radius: 5px;
+.volume-slider {
+    width: 100px;
+    margin-left: 10px;
 }
