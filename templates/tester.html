@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suno - Music App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
+    <script>
+        const midiUrl = "{{ url_for('static', filename='audio/mele.mid') }}";
+    </script>
+</head>
+<body>
+    <h1>Suno - Music App</h1>
+    
+    <!-- Button to Play the MIDI File -->
+    <!-- <button onclick="MIDIjs.play('{{ url_for('static', filename='audio/your_melody.mid') }}');">Play MIDI</button> -->
+    <button onclick="MIDIjs.play(midiUrl);">Play MIDI</button>
+    <!-- Button to Stop the Playback -->
+    <button onclick="MIDIjs.stop();">Stop MIDI</button>
+</body>
+</html>

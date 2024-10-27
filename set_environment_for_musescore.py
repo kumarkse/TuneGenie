@@ -8,3 +8,4 @@ us = environment.UserSettings()
 # us['musicxmlPath'] = musescore_path
 print(us['musicxmlPath'])
 
+    

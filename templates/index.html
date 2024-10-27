@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Suno - Music App</title>
     <link rel="stylesheet" href="/static/css/style.css">
+    <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
+    <script>
+        const midiUrl = "{{ url_for('static', filename='audio/mel.mid') }}";
+    </script>
 </head>
 <body>
     <div class="sidebar">
@@ -70,7 +74,6 @@
                     <button class="volume-button">🔊</button>
                     <input type="range" class="volume-slider" min="0" max="100" value="50">
                 </div>
-                <audio id="audio" src="{{ url_for('static', filename='audio/your_song.mp3') }}"></audio>
             </div>
             </div>
         <div class="middle-section">
