@@ -17,5 +17,6 @@ def download_file(filename):
 def disp():
     return render_template('tester.html')
 
+#commenting it for vercel
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run()
