@@ -135,7 +135,7 @@ background: linear-gradient(304deg, rgba(2,0,36,1) 0%, rgba(183,16,79,1) 62%, rg
 
 .card img {
     width: 100%;
-    height: auto;
+    height: 250px;
     border-radius: 10px 10px 0 0;
 }
 

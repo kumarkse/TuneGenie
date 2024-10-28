@@ -7,13 +7,13 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
     <script>
-        const midiUrl = "{{ url_for('static', filename='audio/mele.mid') }}";
+        const midiUrl = "{{ url_for('static', filename='audio/mela.mid') }}";
     </script>
 </head>
 <body>
     <div class="sidebar">
         <div class="logo">
-            <h1>SUNO</h1>
+            <h1>TuneGenie</h1>
         </div>
         <nav>
             <ul>
@@ -41,17 +41,17 @@
         <div class="top-section">
             <div class="heading">Make a melody of your own</div>
             <div class="searchbox">
-                <input type="text" class="inputbox" placeholder="Enter a number between 1 and 100">
-                <div class="create-btn">♫ Create</div>
+                <input type="text" class="inputbox" placeholder="Enter a seed : Number _ _ _ _ _ number ...">
+                <div class="create-btn" id="create-button">♫ Create</div>
             </div>
             
         </div>
         <div class="lower-section">
             <div class="music-player">
                 <div class="track-info">
-                    <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Album Cover" class="album-cover">
+                    <img src="{{ url_for('static', filename='images/img1.avif') }}" alt="Album Cover" class="album-cover">
                     <div class="track-details">
-                        <h2 class="track-title">Party-Cat</h2>
+                        <h2 class="track-title" id="random">Party-Cat</h2>
                         <h3 class="artist-name">RenhaL</h3>
                     </div>
                 </div>
@@ -79,7 +79,8 @@
         <div class="middle-section">
             <ul class="genres">
                 
-                <li class="global">Cultural Trending
+                <li class="global">
+                    <div class="headd"><h1>Cultural Trending</h1></div>
                     <div class="card-container">
                         <div class="card">
                             <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
@@ -93,12 +94,12 @@
                             <div class="card-content">
                                 <h3>Chaoyang Dance ✨</h3>
                                 <p>[Lively, Bouncy Drop, J-pop]</p>
-                                <p>Wine loves fl...</p>
+                                <p>Wine loves ...</p>
                             </div>
                         </div>
                         
                         <div class="card">
-                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <img src="{{ url_for('static', filename='images/image.png') }}" alt="Logo">
                             <div class="card-overlay">
                                 <div class="duration">2:59</div>
                                 <div class="likes">
@@ -106,14 +107,15 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <h3>The Monster Within</h3>
-                                <p>sad ballad, chill guitar, sa...</p>
-                                <p>Oyojee</p>
+                                <h3>Golden Serenade ✨
+                                </h3>
+                                <p>[Smooth Jazz, Gentle Piano, Evening Chill]</p>
+                                <p>joyce star...</p>
                             </div>
                         </div>
         
                         <div class="card">
-                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <img src="{{ url_for('static', filename='images/img4.jpg') }}" alt="Logoo">
                             <div class="card-overlay">
                                 <div class="duration">2:59</div>
                                 <div class="likes">
@@ -121,14 +123,14 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <h3>The Monster Within</h3>
-                                <p>sad ballad, chill guitar, sa...</p>
-                                <p>Oyojee</p>
+                                <h3>Echoes of Dawn 🌅</h3>
+                                <p>[Calm Acoustic, Soothing Melodies, Morning Bliss]</p>
+                                <p>autistic ...</p>
                             </div>
                         </div>
         
                         <div class="card">
-                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <img src="{{ url_for('static', filename='images/img2.webp') }}" alt="Logo">
                             <div class="card-overlay">
                                 <div class="duration">2:59</div>
                                 <div class="likes">
@@ -136,15 +138,15 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <h3>The Monster Within</h3>
-                                <p>sad ballad, chill guitar, sa...</p>
-                                <p>Oyojee</p>
+                                <h3> Electric Pulse.. ⚡</h3>
+                                <p>[Energetic Beats, Synthwave, Retro Vibes]</p>
+                                <p>veremo ...</p>
                             </div>
                         </div>
         
         
                         <div class="card">
-                            <img src="{{ url_for('static', filename='images/immmg.jpeg') }}" alt="Logo">
+                            <img src="{{ url_for('static', filename='images/img3.avif') }}" alt="Logo">
                             <div class="card-overlay">
                                 <div class="duration">2:59</div>
                                 <div class="likes">
@@ -152,9 +154,11 @@
                                 </div>
                             </div>
                             <div class="card-content">
-                                <h3>The Monster Within</h3>
-                                <p>sad ballad, chill guitar, sa...</p>
-                                <p>Oyojee</p>
+                                <h3>Mystic Groove 🌿</h3>
+                                <p>[Ethnic Fusion, Deep Bass, Trance Rhythms]
+
+                                </p>
+                                <p>ferero ...</p>
                             </div>
                         </div>
                     

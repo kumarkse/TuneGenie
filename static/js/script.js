@@ -92,3 +92,66 @@ const stopButton = document.getElementById('stop-button');
 if (stopButton) {
     stopButton.addEventListener('click', stopPlayback);
 }
+
+
+
+document.getElementById('create-button').addEventListener('click', function() {
+    // Get the input value
+    const inputText = document.querySelector('.inputbox').value;
+
+    // Check if the input is not empty
+    if (inputText.trim() !== "") {
+        // Send the input to the Flask backend
+        fetch('/create-song', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ seed: inputText }),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            console.log('Success:', data);
+            
+            // Generate and set a new random name for the track title
+            const randomName = generateRandomName();
+            localStorage.setItem('trackTitle', randomName); // Store the random name in local storage
+            
+            // Optionally reload or perform any other actions
+            location.reload(); // Reload the page to reflect the changes
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    } else {
+        alert('Please enter a valid input.');
+    }
+});
+
+function generateRandomName() {
+    const prefixes = ["Ar", "El", "Ka", "Ri", "Sa", "Da", "Ti", "Ze", "Fa", "Lo"];
+    const infixes = ["ma", "ra", "lo", "fi", "na", "re", "ko", "ti", "la", "za"];
+    const suffixes = ["ron", "dor", "len", "nia", "dar", "lon", "tar", "xis", "bel", "vis"];
+
+    const prefix = prefixes[Math.floor(Math.random() * prefixes.length)];
+    const infix = infixes[Math.floor(Math.random() * infixes.length)];
+    const suffix = suffixes[Math.floor(Math.random() * suffixes.length)];
+
+    return prefix + infix + suffix;
+}
+
+// Display the track title from local storage when the page loads
+window.addEventListener('load', function() {
+    const savedTrackTitle = localStorage.getItem('trackTitle');
+    if (savedTrackTitle) {
+        const trackTitleElement = document.getElementById("random");
+        if (trackTitleElement) {
+            trackTitleElement.textContent = savedTrackTitle;
+        }
+    }
+});
